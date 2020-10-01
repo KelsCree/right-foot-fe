@@ -3,6 +3,13 @@ const sessionsURL = `${baseURL}/sessions`
 const profileURL = `${baseURL}/profile`
 const newMeditationButton = document.querySelector('#log-meditation')
 const thankYouContainer = document.querySelector('#thank-you-text')
+const timerButton = document.querySelector('#timer-button')
+const spotifyButton = document.querySelector('#spotify-button')
+const spotifyOption = document.querySelector('#spotify')
+const timerOption = document.querySelector('#timer')
+
+timerButton.addEventListener('click', showTimer)
+spotifyButton.addEventListener('click', showSpotify)
 
 const headers = {
   'Content-Type': 'application/json',
@@ -40,3 +47,10 @@ function appendText(user) {
   thankYouContainer.append(thankYouText, goBackHomeButton)
 }
 
+function showTimer() {
+timerOption.classList.toggle('hidden')
+}
+
+function showSpotify() {
+  spotifyOption.classList.toggle('hidden')
+}

@@ -53,7 +53,7 @@ function renderEntries(entry) {
 function countSessions(sessions) {
   const sessionCount = sessions.length
   const sessionCountDisplay = document.createElement('p')
-  if (sessionCount > 1) {
+  if (sessionCount > 1 || sessionCount == 0) {
     sessionCountDisplay.innerText = `You've logged ${sessionCount} meditation sessions! Keep up the good work.`
   } else {
     sessionCountDisplay.innerText = `You've logged ${sessionCount} meditation session! Keep up the good work.`

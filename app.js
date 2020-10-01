@@ -1,13 +1,12 @@
 const baseURL = 'http://localhost:3000'
 const loginURL = `${baseURL}/login`
 const usersURL = `${baseURL}/users`
-
 const loginForm = document.querySelector('.login-form')
 const createAccountButton = document.querySelector("#create-account")
 const newUserForm = document.querySelector('#create-new-user')
+
 newUserForm.addEventListener('submit', createNewUser)
 createAccountButton.addEventListener('click', renderNewUserForm)
-
 loginForm.addEventListener('submit', loginUser)
 
 function loginUser(event){
@@ -57,7 +56,7 @@ function goToProfile(_) {
   }
 
   function renderNewUserForm() {
-
+    newUserForm.classList.toggle("hidden")
   }
 
 function createNewUser(event) {
@@ -66,32 +65,31 @@ function createNewUser(event) {
   const username = newUserFormData.get('username')
   const firstname = newUserFormData.get('firstname')
   const password = newUserFormData.get('password')
-  const newUser = { username, firstname, password }
+  const user = { username, firstname, password }
   fetch(usersURL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ user: newUser })
-    }).then(handleResponseWithErrors)
-      .then(console.log)
-      .catch(error => {
-        console.error(error)
-        const previousErrorMessage = newUserForm.querySelector('p')
-        if (previousErrorMessage) {
-            previousErrorMessage.remove()
-        }
-        const errorMessage = document.createElement('p')
-        errorMessage.textContent = error.message
-        newUserForm.appened(errorMessage)})
-    }
+    body: JSON.stringify({ user })
+    }).then(response => response.json())
+      .then(result => validateUser(result))
+}
 
-function handleResponseWithErrors(response) {
-  console.log(response)
-  if (response.ok) {
-    return response.json()
+function validateUser(result) {
+  const previousErrorMessage = document.querySelector('#existing-error')
+  console.log(result)
+  if (result.errors) {
+    if (previousErrorMessage) {
+      previousErrorMessage.remove()
+    }
+    const error = document.createElement('p')
+    error.id = 'existing-error'
+    error.innerText = result.errors[0]
+    newUserForm.append(error)
   } else {
-    throw new Error('You done goofed.')
+      localStorage.setItem('token', result.token)
+      goToProfile(result)
   }
 }
 
