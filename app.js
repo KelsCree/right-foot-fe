@@ -3,10 +3,12 @@ const loginURL = `${baseURL}/login`
 const usersURL = `${baseURL}/users`
 
 const loginForm = document.querySelector('.login-form')
-const getUsers = document.querySelector('.get-users') //sample Ahmed
+const createAccountButton = document.querySelector("#create-account")
+const newUserForm = document.querySelector('#create-new-user')
+newUserForm.addEventListener('submit', createNewUser)
+createAccountButton.addEventListener('click', renderNewUserForm)
 
 loginForm.addEventListener('submit', loginUser)
-// getUsers.addEventListener('click', retrieveUsers) //sample from Ahmed
 
 function loginUser(event){
   event.preventDefault()
@@ -53,6 +55,45 @@ function goToProfile(_) {
       }
     })
   }
+
+  function renderNewUserForm() {
+
+  }
+
+function createNewUser(event) {
+  event.preventDefault()
+  const newUserFormData = new FormData(event.target)
+  const username = newUserFormData.get('username')
+  const firstname = newUserFormData.get('firstname')
+  const password = newUserFormData.get('password')
+  const newUser = { username, firstname, password }
+  fetch(usersURL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ user: newUser })
+    }).then(handleResponseWithErrors)
+      .then(console.log)
+      .catch(error => {
+        console.error(error)
+        const previousErrorMessage = newUserForm.querySelector('p')
+        if (previousErrorMessage) {
+            previousErrorMessage.remove()
+        }
+        const errorMessage = document.createElement('p')
+        errorMessage.textContent = error.message
+        newUserForm.appened(errorMessage)})
+    }
+
+function handleResponseWithErrors(response) {
+  console.log(response)
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw new Error('You done goofed.')
+  }
+}
 
 function parseJSON(response) {
   return response.json()
