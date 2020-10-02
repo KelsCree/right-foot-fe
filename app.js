@@ -15,15 +15,13 @@ function loginUser(event){
   const username = loginFormData.get('username')
   const password = loginFormData.get('password')
   const user = { username, password }
-
   fetch(loginURL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(user)
-  })
-    .then(parseJSON)
+  }).then(parseJSON)
     .then(result => {
       if (result.token) {
         localStorage.setItem('token', result.token)
