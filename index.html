@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
-    <title>Morning Peace</title>
+    <title>Right Foot</title>
   </head>
   <body>
-    <h1>right foot</h1>
-    <h2>Log In</h2>
-    <form class="login-form">
-      <input type="text" name="username" placeholder="username">
-      <input type="password" name="password" placeholder="password">
-      <input type="submit" value="login">
-    </form>
-    <p>New?</p>
-    <button id="create-account">Create an account.</button>
-    <form id="create-new-user" class="hidden">
-      <input type="text" name="username" placeholder="Username">
-      <input type="text" name="firstname" placeholder="First Name">
-      <input type="password" name="password" placeholder="Password">
-      <input type="submit" value="Submit">
-    </form>
+    <header>
+      <h1 id="title">Right Foot</h1>
+    </header>
+    <div class="login-options">
+      <h2>Log In</h2>
+      <form class="login-form">
+        <input type="text" name="username" placeholder="username">
+        <input type="password" name="password" placeholder="password">
+        <input id="submit" type="submit" value="login">
+      </form>
+      <h2>New?</h2>
+      <button id="create-account">Create an account.</button>
+      <form id="create-new-user" class="hidden">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="firstname" placeholder="First Name">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>

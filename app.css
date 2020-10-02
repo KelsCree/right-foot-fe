@@ -1,17 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+
+.hidden {
+  display: none;
+}
+
 body {
   background-image: url('https://images.pexels.com/photos/1125265/pexels-photo-1125265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 
-.hidden {
-  display: none;
+
+.login-options {
+  background: rgba(221, 161, 94, 0.35);
+  padding: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
+
+input {
+  padding: 5px;
+  font-size: 15px;
+}
+input[type="submit"] {
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  padding: 16px 32px;
+  justify-self: center;
+}
+
+#create-new-user {
+  padding: 15px;
+  align-items: column;
+  justify-content: center;
+}
+
+#create-new-user > input {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  font-size: 75px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+
+/* @media (max-width: 414px) {
+  header {
+    background-image: url('https://images.pexels.com/photos/1125265/pexels-photo-1125265.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    width: 100%;
+    height: 180px;
+    background-position: center;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  body {
+      background-image: none;
+
+      background-color: #283618;
+      max-width: 414px;
+      display: flex;
+      flex-flow: column;
+      align-content: center;
+      justify-content: center;
+  }
+  #title {
+    margin: 25px;
+    margin-top: 50px;
+    font: light;
+    font-size: 45px;
+    font-weight: 300;
+  }
+} */

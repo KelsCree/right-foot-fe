@@ -40,7 +40,7 @@ function renderEntries(entry) {
   const logDate = entry.created_at
   const convertedlogDate = new Date(logDate)
   const shortenedLogDate = convertedlogDate.toDateString()
-  console.log(shortenedLogDate)
+  entryCard.classList.add('entry-card')
   date.textContent = shortenedLogDate
   item1.textContent = entry.item1
   item2.textContent = entry.item2
