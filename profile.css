@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
 
+
 body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
@@ -14,9 +15,10 @@ body {
 
 #journalEntries {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  flex-flow: wrap-reverse;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
   width: 100%;
   padding: 30px;
   background-color: #687684;
@@ -26,7 +28,8 @@ body {
   background-color: #687684;
   width: 100%;
   margin: 0px;
-  padding: 30px;
+  padding: 35px;
+  padding-bottom: 5px;
   align-self: center;
   font-size: 30px;
   color: #f7f9fb;
@@ -44,7 +47,9 @@ body {
   justify-content: center;
   align-content: center;
   justify-items: center;
+  padding-top: 20px;
   border-radius: 7%;
+  width: 18%;
 }
 
 .entry-card > * {
@@ -84,23 +89,29 @@ body {
 
 #addSession:hover {
   transform: scale(1.1);
-  border
 }
 
 #welcome-message {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 40px;
+  padding: 10px;
+  margin: 20px;
 }
 
 #logout:hover {
   color: #bc6c25
 }
 
+#logout {
+  align-self: start;
+}
+
 #button-section {
   display: flex;
   flex-direction: row;
   padding: 20px;
+  margin: 10px;
 }
 
 #meditation-count {
@@ -118,7 +129,7 @@ body {
 }
 
 #session-count {
-  color: #687864
+  color: #687864;
 }
 
 
@@ -130,9 +141,18 @@ body {
   margin: 0 auto; width: 70%;
 }
 
-/* #peace-sign {
-  height: 60px;
-  /* width: 20px; */
-  margin-top: 30px;
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
 
-} */
+#date {
+  align-self: center;
+  color: #31708E;
+}

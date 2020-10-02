@@ -41,6 +41,8 @@ function appendText(user) {
   console.log(user)
   const thankYouText = document.createElement('p')
   const goBackHomeButton = document.createElement('a')
+  thankYouText.id = 'thank-you'
+  goBackHomeButton.id = 'home-button'
   thankYouText.innerText = `Congatulations! You're now one step closer to enlightenment.`
   goBackHomeButton.innerText = 'Go Back Home'
   goBackHomeButton.href = '/profile.html'

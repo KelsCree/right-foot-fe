@@ -1,3 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;1,100&display=swap');
+
 .hidden {
   display: none;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-justify: center;
+  width: 100%;
+  color: #283618;
+  background-color: #f7f9fb;
+}
+
+#log-meditation {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  margin: 30px;
+  font-size: 30px;
+  color: #8FC1E3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-image: url('https://images.pexels.com/photos/70365/forest-sunbeams-trees-sunlight-70365.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')
+}
+
+#log-meditation:hover {
+  transform: scale(1.1)
+}
+
+#title {
+  text-transform: capitalize;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  margin-top: 50px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#headline {
+  font-size: 25px;
+}
+
+#home-button {
+  font-size: 20px;
+  color: #606c38;
+}
+
+#home-button:hover {
+  color: #bc6c25;
+}
+
+#line {
+  margin: 10px;
+  height: 3px;
+  background: #8Fc1E3;
+  border-style: none;
+  margin: 0 auto; width: 70%;
+}
+
+#meditation-extras {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+#timer-section {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 20px;
+
+}
+
+#timer-button {
+  background-color: #283618;
+  color: #f7f9fb;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#spotify-section {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 20px;
+}
+
+#spotify-button {
+  background-color: #283618;
+  color: #f7f9fb;
+  padding: 15px;
+  margin: 10px;
+  font-size: 20px;
+}
+
+#spotify-button:hover {
+  background-color: #5085A5;
+}
+
+#timer-button:hover {
+  background-color: #5085A5;
+}
+
+#home-button {
+  font-size: 20px;
+  color: #606c38;
+}
+
+#home-button:hover {
+  color: #bc6c25;
+}
+
+#thank-you {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px;
+  color: #31708E;
+}
+
+#thank-you-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  text-justify: center;
+}
+
+
+
+
+
+
+  

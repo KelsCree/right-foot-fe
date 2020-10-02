@@ -37,6 +37,7 @@ function renderEntries(entry) {
   const item2 = document.createElement('li')
   const item3 = document.createElement('li')
   const date = document.createElement('h5')
+  date.id = 'date'
   const logDate = entry.created_at
   const convertedlogDate = new Date(logDate)
   const shortenedLogDate = convertedlogDate.toDateString()

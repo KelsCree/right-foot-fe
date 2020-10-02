@@ -42,8 +42,10 @@ function createEntry(event, userID) {
   function appendText() {
     const thankYouText = document.createElement('p')
     const goBackHomeButton = document.createElement('a')
+    thankYouText.id = 'thank-you'
     thankYouText.innerText = 'You have a lot to be grateful for!'
     goBackHomeButton.innerText = 'Go Back Home'
+    goBackHomeButton.id = 'home-button'
     goBackHomeButton.href = '/profile.html'
     mainPage.append(thankYouText, goBackHomeButton)
   }
