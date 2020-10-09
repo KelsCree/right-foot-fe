@@ -44,7 +44,6 @@ function createNewUser(event) {
 ```
     function validateUser(result) {
   const previousErrorMessage = document.querySelector('#existing-error')
-  console.log(result)
   if (result.errors) {
     if (previousErrorMessage) {
       previousErrorMessage.remove()

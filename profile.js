@@ -22,16 +22,12 @@ fetch(profileURL, { headers })
   .then(response => response.json())
   .then(user => {
     welcomeMessage.textContent = `Good morning, ${user.firstname}! Let's get the day started.`
-    console.log(user)
-    console.log(user.entries)
-    console.log(user.sessions)
     const sessions = user.sessions
     countSessions(sessions)
     user.entries.forEach(entry => renderEntries(entry))
   })
 
 function renderEntries(entry) {
-  console.log(entry)
   const entryCard = document.createElement('div')
   const item1 = document.createElement('li')
   const item2 = document.createElement('li')

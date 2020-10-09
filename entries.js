@@ -16,7 +16,6 @@ fetch(profileURL, { headers })
   .then(user => {
     title.innerText = `${user.firstname}'s Gratitude Journal`
     const userID = user.id
-    console.log(userID)
     entryForm.addEventListener('submit', createEntry)
   })
 

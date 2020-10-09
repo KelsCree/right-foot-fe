@@ -25,7 +25,6 @@ function loginUser(event){
     .then(result => {
       if (result.token) {
         localStorage.setItem('token', result.token)
-        console.log(result.token)
         goToProfile()
       } else {
         const errorMessage = document.createElement('p')
@@ -76,7 +75,6 @@ function createNewUser(event) {
 
 function validateUser(result) {
   const previousErrorMessage = document.querySelector('#existing-error')
-  console.log(result)
   if (result.errors) {
     if (previousErrorMessage) {
       previousErrorMessage.remove()

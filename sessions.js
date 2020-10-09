@@ -38,7 +38,6 @@ function removeButton() {
 }
 
 function appendText(user) {
-  console.log(user)
   const thankYouText = document.createElement('p')
   const goBackHomeButton = document.createElement('a')
   thankYouText.id = 'thank-you'
