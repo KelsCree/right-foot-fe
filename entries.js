@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://right-foot.herokuapp.com'
 const entriesURL = `${baseURL}/entries`
 const profileURL = `${baseURL}/profile`
 const mainPage = document.querySelector('#main-page')

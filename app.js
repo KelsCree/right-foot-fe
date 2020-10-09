@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://right-foot.herokuapp.com'
 const loginURL = `${baseURL}/login`
 const usersURL = `${baseURL}/users`
 const loginForm = document.querySelector('.login-form')

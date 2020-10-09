@@ -1,4 +1,4 @@
-const baseURL = 'http://localhost:3000'
+const baseURL = 'https://right-foot.herokuapp.com'
 const sessionsURL = `${baseURL}/sessions`
 const profileURL = `${baseURL}/profile`
 const newMeditationButton = document.querySelector('#log-meditation')
