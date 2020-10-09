@@ -21,7 +21,7 @@ function loginUser(event){
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(user)
-  }).then(parseJSON)
+  }).then(response => response.json())
     .then(result => {
       if (result.token) {
         localStorage.setItem('token', result.token)
