@@ -19,7 +19,7 @@ Right Foot is an application that allows users to intentially practice and track
 
 ## How It Works
 
-[Right Foot](youtubelink)
+[Right Foot](https://youtu.be/nWK9kczYeVc)
 
 ## Example Code 
 ```
